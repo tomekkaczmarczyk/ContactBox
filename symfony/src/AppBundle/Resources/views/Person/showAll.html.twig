@@ -1,0 +1,15 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+Twoje Kontakty
+{% endblock %}
+
+{% block body %}
+
+{% for person in people %}
+{{ include('AppBundle:Person:personInfo.html.twig', {'person' : person}) }}
+
+    <hr>
+{% endfor %}
+{% endblock %}
+

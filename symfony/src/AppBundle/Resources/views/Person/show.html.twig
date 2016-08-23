@@ -1,0 +1,10 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+Twoje Kontakty
+{% endblock %}
+
+{% block body %}
+{{ include('AppBundle:Person:person.html.twig', {'person':person}) }}
+{% endblock %}
+

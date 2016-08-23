@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+Panel Edycji
+{% endblock %}
+
+{% block body %}
+    {{ include('AppBundle:Person:person.html.twig', {'person':person}) }}
+<hr style="height: 4px;background-color: black">
+    <h2><p>Edycja danych kontaktu:</p></h2>
+    {{ form(personForm) }}
+<hr>
+    <p>Dodawanie adresu:</p>
+    {{ form(addressForm) }}
+    <hr>
+    <p>Dodawanie emaila:</p>
+    {{ form(emailForm) }}
+    <hr>
+    <p>Dodawanie numeru telefonu:</p>
+    {{ form(phoneForm) }}
+
+{% endblock %}
+

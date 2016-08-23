@@ -1,0 +1,26 @@
+{{ include('AppBundle:Person:personInfo.html.twig', {'person':person}) }}
+<p>Adresy:</p>
+<ol>
+{% for address in person.addresses %}
+    <li>{{ include('AppBundle:Person:address.html.twig', {'person': person}) }}</li>
+{% else %}
+    <p>Brak adresów</p>
+{% endfor %}
+</ol>
+    <p>Maile:</p>
+<ol>
+    {% for email in person.emails %}
+        <li>{{ include('AppBundle:Person:email.html.twig', {'person': person}) }}</li>
+    {% else %}
+        <p>Brak emaili</p>
+    {% endfor %}
+</ol>
+    <p>Telefony:</p>
+
+    <ol>
+    {% for phone in person.phones %}
+        <li>{{ include('AppBundle:Person:phone.html.twig', {'person': person}) }}</li>
+    {% else %}
+        <p>Brak telefonów</p>
+    {% endfor %}
+</ol>
